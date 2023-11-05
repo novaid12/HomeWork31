@@ -56,6 +56,9 @@ class TasksTVC: UITableViewController {
         navigationItem.setRightBarButton(add, animated: true)
         
         navigationItem.rightBarButtonItems = [editButtonItem, add]
+        
+        let nib = UINib(nibName: "TasksCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "TasksCell")
     }
 
     // MARK: - Table view data source
@@ -71,10 +74,11 @@ class TasksTVC: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TasksCell", for: indexPath) as! TasksCell
         let task = indexPath.section == 0 ? notCompletedTasks[indexPath.row] : completedTasks[indexPath.row]
-        cell.textLabel?.text = task.name
-        cell.detailTextLabel?.text = task.note
+        cell.nameLbl.text = task.name
+        cell.nameLbl.font = .systemFont(ofSize: 25)
+        cell.noteLbl.text = task.note
         return cell
     }
 
@@ -111,15 +115,12 @@ class TasksTVC: UITableViewController {
   
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let task = sourceIndexPath.section == 0 ? notCompletedTasks[sourceIndexPath.row] : completedTasks[sourceIndexPath.row]
-        print(task)
-        
         let complete = sourceIndexPath.section == 0 ? true : false
-        print(complete)
-        
         StorageManager.moveTask(task: task, complete: complete) { [weak self] in
             self?.filteringTasks()
         }
     }
+
     
     private func filteringTasks() {
         notCompletedTasks = currentTasksList?.tasks.filter("isComplete = false")

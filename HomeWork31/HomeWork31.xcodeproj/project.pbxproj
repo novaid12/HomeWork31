@@ -20,6 +20,8 @@
 		987DA5612AF66EC900237991 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987DA5602AF66EC900237991 /* ListModel.swift */; };
 		987DA5642AF66F6E00237991 /* TasksListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987DA5632AF66F6E00237991 /* TasksListTVC.swift */; };
 		987DA5662AF66F7E00237991 /* TasksTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987DA5652AF66F7E00237991 /* TasksTVC.swift */; };
+		98E2B96A2AF7B03C0040C914 /* TasksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E2B9682AF7B03C0040C914 /* TasksCell.swift */; };
+		98E2B96B2AF7B03C0040C914 /* TasksCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98E2B9692AF7B03C0040C914 /* TasksCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		987DA5602AF66EC900237991 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		987DA5632AF66F6E00237991 /* TasksListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksListTVC.swift; sourceTree = "<group>"; };
 		987DA5652AF66F7E00237991 /* TasksTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTVC.swift; sourceTree = "<group>"; };
+		98E2B9682AF7B03C0040C914 /* TasksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksCell.swift; sourceTree = "<group>"; };
+		98E2B9692AF7B03C0040C914 /* TasksCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TasksCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,9 +133,27 @@
 			isa = PBXGroup;
 			children = (
 				987DA5632AF66F6E00237991 /* TasksListTVC.swift */,
-				987DA5652AF66F7E00237991 /* TasksTVC.swift */,
+				98E2B9662AF7B01A0040C914 /* TasksTVC */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		98E2B9662AF7B01A0040C914 /* TasksTVC */ = {
+			isa = PBXGroup;
+			children = (
+				98E2B9672AF7B0260040C914 /* TasksCell */,
+				987DA5652AF66F7E00237991 /* TasksTVC.swift */,
+			);
+			path = TasksTVC;
+			sourceTree = "<group>";
+		};
+		98E2B9672AF7B0260040C914 /* TasksCell */ = {
+			isa = PBXGroup;
+			children = (
+				98E2B9682AF7B03C0040C914 /* TasksCell.swift */,
+				98E2B9692AF7B03C0040C914 /* TasksCell.xib */,
+			);
+			path = TasksCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98E2B96B2AF7B03C0040C914 /* TasksCell.xib in Resources */,
 				987DA5492AF6628700237991 /* LaunchScreen.storyboard in Resources */,
 				987DA5462AF6628700237991 /* Assets.xcassets in Resources */,
 				987DA5412AF6628500237991 /* Main.storyboard in Resources */,
@@ -220,6 +243,7 @@
 				987DA55C2AF66E9200237991 /* StorageManager.swift in Sources */,
 				987DA55F2AF66EB700237991 /* TasksListModel.swift in Sources */,
 				987DA5642AF66F6E00237991 /* TasksListTVC.swift in Sources */,
+				98E2B96A2AF7B03C0040C914 /* TasksCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,11 +393,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MCK9LL98Q8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HomeWork31/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "List ToDo-s";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -397,11 +423,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MCK9LL98Q8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HomeWork31/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "List ToDo-s";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

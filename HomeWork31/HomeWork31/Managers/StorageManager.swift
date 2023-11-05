@@ -124,7 +124,6 @@ enum StorageManager {
                  
                 task.isComplete = complete
                 complition()
-                print(task)
             }
         } catch {
             print("moveTask error: \(error)")
